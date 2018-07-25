@@ -16,8 +16,8 @@
                  (sr (sameValue prev next) next (rest coll))))
   ([acc prev coll] (if (empty? coll)
                      acc
-                     (recur (+ acc (sameValue prev (first coll))) (first coll) (rest coll))))
-  )
+                     (recur (+ acc (sameValue prev (first coll))) (first coll) (rest coll)))))
+
 
 (prn (sr (parseDigits "1122")))
 (prn (sr (parseDigits "1111")))
