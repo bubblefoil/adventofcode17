@@ -4,7 +4,7 @@
 
 (defn lines-of
   "Loads lines from a file, optionally transformed by given function."
-  ([path] (lines-of identity))
+  ([path] (lines-of path identity))
   ([path fn] (with-open [rdr (io/reader path)]
                (doall (map fn (line-seq rdr))))))
 
